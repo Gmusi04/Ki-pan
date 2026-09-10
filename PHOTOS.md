@@ -5,19 +5,25 @@
 Las 144 fragancias árabes (Rasasi, Armaf, Lattafa, Afnan, Al Haramain,
 Bharara, Orientica, Maison, French Avenue, Dumont, Jo Milano, MP) ya tienen
 su foto real en `public/images/products/<slug>.jpg`, recortada del PDF del
-catálogo que subiste.
+catálogo con fondo blanco que subiste (`CATA_LOGO_ARABE2.pdf`). Cada imagen
+ya venía en fondo blanco limpio, así que solo se recortó y centró — sin
+placeholders, sin recortes, sin artefactos.
 
 No pude bajar fotos directo desde los links de Canva (ese dominio está
 bloqueado en mi entorno por seguridad, sin relación con permisos), pero el
-PDF exportado sí funcionó — de ahí saqué cada imagen y las recorté una por
-una automáticamente.
+PDF exportado sí funcionó — de ahí saqué cada imagen automáticamente.
 
-## Catálogo de diseñador — pendiente
+## Catálogo de diseñador — pendiente ⚠️
 
 Las 192 fragancias de diseñador (Dior, YSL, Armani, Valentino, Versace,
-Carolina Herrera, etc.) siguen con el placeholder de color por familia. Si
-me pasas el mismo tipo de PDF (exportado desde Canva, no el link) para ese
-catálogo, hago el mismo proceso.
+Carolina Herrera, etc.) siguen con el placeholder de color por familia.
+
+Intentamos varias veces pero el PDF del catálogo de diseñador nunca llegó
+como archivo adjunto real a esta conversación (solo llegaron dos copias del
+catálogo árabe). Para poder procesar las fotos de diseñador de la misma
+forma, sube el PDF del catálogo de diseñador como **archivo adjunto** (el
+clip 📎 del chat), igual que hiciste con el árabe — no como imagen pegada
+ni como link de Canva, porque esos no los puedo leer.
 
 ## Fotos generales del sitio — pendientes
 

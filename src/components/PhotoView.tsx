@@ -107,14 +107,16 @@ export function PhotoView({
 }) {
   if (exists) {
     return (
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes={sizes ?? "100vw"}
-        className={`object-cover ${className ?? ""}`}
-      />
+      <div className={`absolute inset-0 bg-white ${className ?? ""}`}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes={sizes ?? "100vw"}
+          className="object-contain p-2"
+        />
+      </div>
     );
   }
   return <Placeholder label={label ?? alt} kind={kind} className={className} tint={tint} quiet={quiet} />;

@@ -8,13 +8,13 @@ export type GalleryImage = {
 };
 
 export const gallery: GalleryImage[] = [
-  { src: "/images/gallery-conchas.jpg", alt: "Conchas recién horneadas de Ki'Pan", kind: "concha", span: "tall" },
-  { src: "/images/gallery-interior.jpg", alt: "Interior de Ki'Pan en Temozón Norte", kind: "interior", span: "wide" },
-  { src: "/images/gallery-masa-madre.jpg", alt: "Pan de masa madre horneado del día", kind: "bread", span: "square" },
-  { src: "/images/gallery-desayuno.jpg", alt: "Mesa de desayuno en Ki'Pan", kind: "table", span: "square" },
-  { src: "/images/gallery-cafe.jpg", alt: "Café de Ki'Pan", kind: "coffee", span: "tall" },
-  { src: "/images/gallery-fachada.jpg", alt: "Fachada de Ki'Pan en Plaza Vía Cinco", kind: "storefront", span: "wide" },
-  { src: "/images/gallery-chilaquiles.jpg", alt: "Chilaquiles de Ki'Pan", kind: "table", span: "square" },
-  { src: "/images/gallery-jugo.jpg", alt: "Jugo cold press de Ki'Pan", kind: "juice", span: "tall" },
-  { src: "/images/gallery-panaderia.jpg", alt: "Área de panadería y horneado", kind: "wheat", span: "square" },
+  { src: "/images/gallery-bottle-1.jpg", alt: "Frasco de fragancia Iconic Scents", kind: "bottle", span: "tall" },
+  { src: "/images/gallery-flatlay.jpg", alt: "Composición de frascos en flat lay", kind: "flatlay", span: "wide" },
+  { src: "/images/gallery-detail-1.jpg", alt: "Detalle de tapa y etiqueta", kind: "detail", span: "square" },
+  { src: "/images/gallery-packaging.jpg", alt: "Empaque de Iconic Scents", kind: "packaging", span: "square" },
+  { src: "/images/gallery-lifestyle-1.jpg", alt: "Fragancia en un momento del día a día", kind: "lifestyle", span: "tall" },
+  { src: "/images/gallery-spray.jpg", alt: "Aplicación de la fragancia", kind: "spray", span: "wide" },
+  { src: "/images/gallery-bottle-2.jpg", alt: "Frasco de fragancia, plano cercano", kind: "bottle", span: "square" },
+  { src: "/images/gallery-lifestyle-2.jpg", alt: "Estilo de vida con Iconic Scents", kind: "lifestyle", span: "square" },
+  { src: "/images/gallery-detail-2.jpg", alt: "Detalle del frasco y su textura", kind: "detail", span: "square" },
 ];

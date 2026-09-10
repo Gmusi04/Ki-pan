@@ -1,39 +1,35 @@
 import Image from "next/image";
 
 export type PhotoKind =
-  | "concha"
-  | "bread"
-  | "coffee"
-  | "wheat"
-  | "interior"
-  | "table"
-  | "juice"
-  | "storefront";
+  | "bottle"
+  | "detail"
+  | "lifestyle"
+  | "packaging"
+  | "flatlay"
+  | "spray";
 
 const icons: Record<PhotoKind, string> = {
-  concha:
-    "M12 3c-4 0-7 3-7 7 0 4 3 8 7 8s7-4 7-8c0-4-3-7-7-7Zm0 2c1.5 1.2 2.4 2.7 2.7 4.5M12 5c-1.5 1.2-2.4 2.7-2.7 4.5M6.3 11.2c1.9-.5 3.8-.5 5.7 0 1.9-.5 3.8-.5 5.7 0",
-  bread:
-    "M4 12c0-3.5 3-6 8-6s8 2.5 8 6-3 8-8 8-8-4.5-8-8Zm2.5-1.5c2 .8 3 .8 5.5 0m-2 0c2 .8 3 .8 5.5 0",
-  coffee:
-    "M5 9h11v5a5 5 0 0 1-5 5H9a4 4 0 0 1-4-4V9Zm11 1.5h1.5a2.5 2.5 0 0 1 0 5H16M8 5.5c0-.8.6-1 .6-1.8M12 5.5c0-.8.6-1 .6-1.8",
-  wheat:
-    "M12 21V6m0 0-2.5-2M12 6l2.5-2M12 9l-2.8-1.6M12 9l2.8-1.6M12 13l-2.8-1.6M12 13l2.8-1.6M12 17l-2.8-1.6M12 17l2.8-1.6",
-  interior: "M4 20V9l8-5 8 5v11M4 20h16M9 20v-6h6v6M9 12h.01M15 12h.01",
-  table: "M3 9h18M5 9l1 11h12l1-11M9 9V6a3 3 0 0 1 6 0v3",
-  juice: "M8 3h8l-1 4H9L8 3Zm1 4-1 13.5A1.5 1.5 0 0 0 9.5 22h5a1.5 1.5 0 0 0 1.5-1.5L15 7M8 12h8",
-  storefront: "M4 10V6l2-3h12l2 3v4M4 10h16M4 10l1 10h14l1-10M9 20v-5a3 3 0 0 1 6 0v5",
+  bottle:
+    "M10 3h4M10.5 3v2.6c0 .5-.3.9-.7 1.2C8.7 7.7 8 9 8 10.8V19a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-8.2c0-1.8-.7-3.1-1.8-4-.4-.3-.7-.7-.7-1.2V3M9.5 13.5h5",
+  detail:
+    "M12 3v3.5M9 8h6l1 2.5H8L9 8Zm-1 2.5h8V19a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-8.5Z",
+  lifestyle:
+    "M12 12.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-6.5 8c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5",
+  packaging:
+    "M4 8.5 12 4l8 4.5-8 4.5-8-4.5Zm0 0V17l8 4.5m0-8.5v8.5m0-8.5 8-4.5V17l-8 4.5",
+  flatlay:
+    "M4.5 4.5h15v15h-15v-15Zm3.5 3.5h2v2h-2v-2Zm5.5 0h2v2h-2v-2ZM8 13.5h2v2H8v-2Zm5.5 0h2v2h-2v-2Z",
+  spray:
+    "M12 3v2.5M9.3 4.3l1.1 1.6M14.7 4.3l-1.1 1.6M7.5 9c-1.7 1-2.8 2.9-2.8 5A7.3 7.3 0 0 0 12 21a7.3 7.3 0 0 0 7.3-7c0-2.1-1.1-4-2.8-5l-4.5-3-4.5 3Z",
 };
 
 const labels: Record<PhotoKind, string> = {
-  concha: "Concha",
-  bread: "Pan",
-  coffee: "Café",
-  wheat: "Panadería",
-  interior: "Interior",
-  table: "Mesa",
-  juice: "Bebida",
-  storefront: "Fachada",
+  bottle: "Frasco",
+  detail: "Detalle",
+  lifestyle: "Estilo de vida",
+  packaging: "Empaque",
+  flatlay: "Flat lay",
+  spray: "Aplicación",
 };
 
 function Placeholder({
@@ -47,15 +43,15 @@ function Placeholder({
 }) {
   return (
     <div
-      className={`absolute inset-0 flex flex-col justify-end overflow-hidden bg-gradient-to-br from-[#e8d3b3] via-[#dcc09a] to-[#c99a6c] ${className ?? ""}`}
+      className={`absolute inset-0 flex flex-col justify-end overflow-hidden bg-gradient-to-br from-[#141210] via-[#1e1a15] to-[#2d2519] ${className ?? ""}`}
     >
       <div className="grain-overlay" />
-      <div className="absolute inset-0 flex items-center justify-center opacity-25">
+      <div className="absolute inset-0 flex items-center justify-center opacity-30">
         <svg
           viewBox="0 0 24 24"
-          className="h-16 w-16 md:h-24 md:w-24"
+          className="h-14 w-14 md:h-20 md:w-20"
           fill="none"
-          stroke="var(--color-ink)"
+          stroke="var(--color-gold)"
           strokeWidth="0.8"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -63,9 +59,9 @@ function Placeholder({
           <path d={icons[kind]} />
         </svg>
       </div>
-      <div className="relative z-10 flex flex-col gap-0.5 bg-[var(--color-ink)]/85 px-3 py-2 text-[var(--color-cream)]">
+      <div className="relative z-10 flex flex-col gap-0.5 bg-[var(--color-ink)]/90 px-3 py-2 text-[var(--color-cream)]">
         <div className="flex items-center justify-between gap-2 text-[10px] uppercase tracking-[0.14em] md:text-xs">
-          <span>Foto real pendiente</span>
+          <span>Foto pendiente</span>
           <span className="opacity-70">{labels[kind]}</span>
         </div>
         <p className="truncate text-[10px] normal-case tracking-normal text-[var(--color-cream)]/70">
@@ -81,7 +77,7 @@ export function PhotoView({
   src,
   alt,
   label,
-  kind = "bread",
+  kind = "bottle",
   className,
   priority,
   sizes,

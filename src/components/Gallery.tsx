@@ -22,11 +22,11 @@ export function Gallery({
     <section id="galeria" className="bg-[var(--color-cream)] py-24 md:py-32">
       <div className="container-editorial">
         <Reveal className="mb-12 max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-terracotta)]">
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
             Galería
           </p>
           <h2 className="mt-3 font-serif-display text-4xl text-[var(--color-ink)] sm:text-5xl">
-            El lugar, el pan y la mesa
+            El detalle detrás de cada frasco
           </h2>
         </Reveal>
 

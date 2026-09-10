@@ -1,8 +1,8 @@
-# Ki'Pan — sitio web
+# Iconic Scents — sitio web
 
-Sitio de producción para Ki'Pan (panadería artesanal, desayunos y brunch en
-Temozón Norte, Mérida). Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
-+ Framer Motion.
+Sitio minimalista para Iconic Scents (perfumería, catálogo por Instagram y
+WhatsApp). Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Framer
+Motion.
 
 ## Desarrollo
 
@@ -19,18 +19,21 @@ npm run start   # sirve el build
 npm run lint    # eslint
 ```
 
-## Fotografía real
+## Contenido a personalizar
 
-El diseño está construido para recibir la fotografía real de Ki'Pan. Mientras
-no exista un archivo en la ruta esperada, cada sección muestra un placeholder
-identificado con la etiqueta "Foto real pendiente". Ver **[PHOTOS.md](./PHOTOS.md)**
-para la lista exacta de archivos que hay que colocar en `public/images/` — al
-agregarlos con el nombre indicado, la foto real reemplaza el placeholder
-automáticamente, sin tocar código.
+- **Marca y contacto**: `src/data/site.ts` — nombre, tagline, Instagram,
+  WhatsApp, correo (opcional) y nota de envíos.
+- **Catálogo**: `src/data/products.ts` — agrega tantas fragancias como
+  quieras; cada una tiene nombre, familia olfativa, género, tamaño, precio
+  (o `null` para "Precio por WhatsApp") y descripción. El grid, los filtros
+  y el botón de pedido por WhatsApp funcionan solos, sin límite de productos.
+- **Fotografía**: ver **[PHOTOS.md](./PHOTOS.md)**. Mientras no exista un
+  archivo en la ruta esperada dentro de `public/images/`, cada sección
+  muestra un placeholder identificado con la etiqueta "Foto pendiente"; al
+  agregar la imagen con el nombre indicado, reemplaza el placeholder
+  automáticamente.
 
-## Contenido
+## Estructura de la página
 
-Los datos del negocio (dirección, teléfono, horarios, redes, menú) viven en
-`src/data/site.ts` y `src/data/menu.ts`. Están basados en investigación
-pública verificada — no se inventó ningún dato. Si algo cambia (horario,
-teléfono, redes), se actualiza ahí.
+Portada → Nosotros → Colección (catálogo filtrable) → Galería → Cómo comprar
+→ Instagram → Contacto.

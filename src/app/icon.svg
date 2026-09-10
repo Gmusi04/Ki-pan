@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="16" fill="#b34a2d" />
+  <rect width="64" height="64" rx="16" fill="#0f0e0d" />
   <text
     x="32"
-    y="43"
+    y="41"
     text-anchor="middle"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="34"
-    fill="#fbf3e6"
-  >K</text>
+    font-size="24"
+    letter-spacing="1"
+    fill="#b08d57"
+  >IS</text>
 </svg>

@@ -1,27 +1,30 @@
-import { ConchasFeature } from "@/components/ConchasFeature";
-import { Experience } from "@/components/Experience";
+import { Catalog } from "@/components/Catalog";
+import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { HowToBuy } from "@/components/HowToBuy";
 import { Intro } from "@/components/Intro";
-import { Location } from "@/components/Location";
-import { Menu } from "@/components/Menu";
 import { MobileTabBar } from "@/components/MobileTabBar";
 import type { PhotoKind } from "@/components/PhotoView";
-import { Reviews } from "@/components/Reviews";
 import { Social } from "@/components/Social";
 import { gallery } from "@/data/gallery";
+import { products } from "@/data/products";
 import { photoExists } from "@/lib/photoExists";
 
 const socialFeed: { src: string; alt: string; kind: PhotoKind }[] = [
-  { src: "/images/ig-1.jpg", alt: "Publicación de Instagram de Ki'Pan", kind: "concha" },
-  { src: "/images/ig-2.jpg", alt: "Publicación de Instagram de Ki'Pan", kind: "bread" },
-  { src: "/images/ig-3.jpg", alt: "Publicación de Instagram de Ki'Pan", kind: "coffee" },
-  { src: "/images/ig-4.jpg", alt: "Publicación de Instagram de Ki'Pan", kind: "table" },
+  { src: "/images/ig-1.jpg", alt: "Publicación de Instagram de Iconic Scents", kind: "bottle" },
+  { src: "/images/ig-2.jpg", alt: "Publicación de Instagram de Iconic Scents", kind: "flatlay" },
+  { src: "/images/ig-3.jpg", alt: "Publicación de Instagram de Iconic Scents", kind: "lifestyle" },
+  { src: "/images/ig-4.jpg", alt: "Publicación de Instagram de Iconic Scents", kind: "detail" },
 ];
 
 export default function Home() {
+  const productsWithExists = products.map((p) => ({
+    ...p,
+    exists: photoExists(`/images/products/${p.slug}.jpg`),
+  }));
   const galleryWithExists = gallery.map((img) => ({
     ...img,
     exists: photoExists(img.src),
@@ -37,13 +40,11 @@ export default function Home() {
       <main className="pb-16 md:pb-0">
         <Hero />
         <Intro />
-        <ConchasFeature />
-        <Menu exists={photoExists("/images/menu-mesa.jpg")} />
+        <Catalog products={productsWithExists} />
         <Gallery images={galleryWithExists} />
-        <Experience />
+        <HowToBuy />
         <Social feed={socialWithExists} />
-        <Reviews />
-        <Location />
+        <Contact />
       </main>
       <Footer />
       <MobileTabBar />

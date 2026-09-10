@@ -17,86 +17,52 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = "https://kipan.mx";
+// TODO: reemplaza por tu dominio real cuando lo tengas.
+const siteUrl = "https://iconicscents.example.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ki’Pan | Panadería artesanal, desayunos y brunch en Mérida",
-    template: "%s | Ki’Pan",
+    default: "Iconic Scents | Fragancias con carácter",
+    template: "%s | Iconic Scents",
   },
   description:
-    "Ki’Pan: panadería artesanal en Temozón Norte, Mérida. Hogar de las mejores conchas de México, pan de masa madre horneado a diario, desayunos, brunch, chilaquiles y café.",
+    "Iconic Scents: fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo, pedidos y envíos por Instagram y WhatsApp.",
   keywords: [
-    "panadería en Mérida",
-    "panadería Temozón",
-    "desayunos en Temozón",
-    "brunch Mérida",
-    "conchas Mérida",
-    "café Temozón",
-    "desayunos Temozón Norte",
-    "pan de masa madre Mérida",
+    "perfumes",
+    "fragancias",
+    "perfumería",
+    "perfumes de nicho",
+    "Iconic Scents",
+    "perfumes México",
+    "comprar perfume por WhatsApp",
   ],
   openGraph: {
-    title: "Ki’Pan | Panadería artesanal, desayunos y brunch en Mérida",
+    title: "Iconic Scents | Fragancias con carácter",
     description:
-      "Hogar de las mejores conchas de México. Pan de masa madre, desayunos, brunch y café en Temozón Norte, Mérida.",
+      "Fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo y pedidos por Instagram y WhatsApp.",
     url: siteUrl,
-    siteName: "Ki’Pan",
+    siteName: "Iconic Scents",
     locale: "es_MX",
     type: "website",
-    images: [{ url: "/images/hero-conchas.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/hero-perfume.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ki’Pan | Panadería artesanal, desayunos y brunch en Mérida",
+    title: "Iconic Scents | Fragancias con carácter",
     description:
-      "Hogar de las mejores conchas de México. Pan de masa madre, desayunos, brunch y café en Temozón Norte, Mérida.",
-    images: ["/images/hero-conchas.jpg"],
+      "Fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo y pedidos por Instagram y WhatsApp.",
+    images: ["/images/hero-perfume.jpg"],
   },
   alternates: { canonical: siteUrl },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Bakery",
+  "@type": "Organization",
   name: site.name,
   description: site.description,
-  telephone: site.phoneDisplay,
-  priceRange: site.priceSymbol,
-  servesCuisine: ["Panadería", "Desayuno", "Brunch", "Café"],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${site.address.line1}, ${site.address.line2}`,
-    addressLocality: "Mérida",
-    addressRegion: "Yucatán",
-    postalCode: "97302",
-    addressCountry: "MX",
-  },
-  openingHoursSpecification: site.hours
-    .filter((h) => h.open && h.close)
-    .map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: `https://schema.org/${
-        {
-          Lunes: "Monday",
-          Martes: "Tuesday",
-          Miércoles: "Wednesday",
-          Jueves: "Thursday",
-          Viernes: "Friday",
-          Sábado: "Saturday",
-          Domingo: "Sunday",
-        }[h.day]
-      }`,
-      opens: h.open,
-      closes: h.close,
-    })),
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: site.rating,
-    reviewCount: site.reviewCount,
-  },
-  sameAs: [site.social.instagram, site.social.facebook, site.social.tiktok],
+  sameAs: [site.social.instagram],
   url: siteUrl,
 };
 

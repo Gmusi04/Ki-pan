@@ -2,28 +2,28 @@ import { Reveal } from "./Reveal";
 
 export function Intro() {
   return (
-    <section id="pan" className="relative bg-[var(--color-cream)] py-24 md:py-32">
+    <section id="nosotros" className="relative bg-[var(--color-cream)] py-24 md:py-32">
       <div className="container-editorial grid gap-10 md:grid-cols-12 md:gap-6">
         <Reveal className="md:col-span-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-terracotta)]">
-            Panadería artesanal
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
+            Iconic Scents
           </p>
         </Reveal>
 
         <Reveal delay={0.1} className="md:col-span-8">
           <h2 className="font-serif-display text-3xl leading-tight text-[var(--color-ink)] sm:text-4xl md:text-5xl">
-            En Ki&rsquo;Pan el horno enciende antes que Temozón se despierte.
+            Cada fragancia cuenta una historia.
           </h2>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-[var(--color-ink-soft)] md:text-lg">
             <p>
-              Todos los días se hornea pan de masa madre y pan dulce desde cero:
-              fermentación larga, técnica de panadería europea y una barra que
-              acompaña cada pieza con una cocina pensada para desayunar bien.
+              Seleccionamos fragancias con carácter propio: amaderadas,
+              florales, cítricas y orientales, pensadas para quienes buscan
+              algo más que un perfume — una firma que los identifique.
             </p>
             <p>
-              La carta se mueve entre chilaquiles, sándwiches hechos con pan del
-              día, café y jugos prensados en frío — el tipo de mesa donde uno se
-              queda más tiempo del que planeaba.
+              El catálogo completo, novedades y disponibilidad se mueven
+              primero en Instagram. Escríbenos por ahí o por WhatsApp y te
+              ayudamos a encontrar tu fragancia.
             </p>
           </div>
         </Reveal>

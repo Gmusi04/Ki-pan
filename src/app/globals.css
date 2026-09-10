@@ -1,18 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta derivada de la identidad real de Ki'Pan: masa madre, concha horneada,
-     ladrillo y cal yucateca, verde de huerta. Cálida, natural, editorial. */
-  --color-cream: #fbf3e6;
-  --color-parchment: #f4e8d6;
-  --color-crust: #e8d3b3;
-  --color-ink: #2b1c12;
-  --color-ink-soft: #6b5745;
-  --color-terracotta: #b34a2d;
-  --color-terracotta-dark: #9c3f27;
-  --color-butter: #d9a441;
-  --color-sage: #74815a;
-  --color-line: rgba(43, 28, 18, 0.12);
+  /* Paleta minimalista de Iconic Scents: negro, marfil y dorado. */
+  --color-cream: #f8f6f2;
+  --color-parchment: #efeae2;
+  --color-crust: #e4ddd0;
+  --color-ink: #0f0e0d;
+  --color-ink-soft: #5c5650;
+  --color-gold: #b08d57;
+  --color-gold-dark: #8f6f3f;
+  --color-line: rgba(15, 14, 13, 0.12);
 
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);
@@ -24,10 +21,8 @@
   --color-crust: var(--color-crust);
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
-  --color-terracotta: var(--color-terracotta);
-  --color-terracotta-dark: var(--color-terracotta-dark);
-  --color-butter: var(--color-butter);
-  --color-sage: var(--color-sage);
+  --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
   --color-line: var(--color-line);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
@@ -49,8 +44,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-terracotta);
-  color: var(--color-cream);
+  background: var(--color-gold);
+  color: var(--color-ink);
 }
 
 .font-serif-display {

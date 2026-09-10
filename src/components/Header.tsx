@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 
 const links = [
-  { href: "#pan", label: "Pan" },
-  { href: "#menu", label: "Menú" },
+  { href: "#coleccion", label: "Colección" },
   { href: "#galeria", label: "Galería" },
-  { href: "#nosotros", label: "Experiencia" },
-  { href: "#ubicacion", label: "Ubicación" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#contacto", label: "Contacto" },
 ];
 
 export function Header() {
@@ -33,9 +32,9 @@ export function Header() {
       <div className="container-editorial flex h-16 items-center justify-between md:h-20">
         <a
           href="#top"
-          className="font-serif-display text-xl tracking-tight text-[var(--color-ink)] md:text-2xl"
+          className="font-serif-display text-lg uppercase tracking-[0.2em] text-[var(--color-ink)] md:text-xl"
         >
-          Ki&rsquo;Pan
+          Iconic Scents
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -46,25 +45,27 @@ export function Header() {
               className="group relative text-sm tracking-wide text-[var(--color-ink)]/80 transition-colors hover:text-[var(--color-ink)]"
             >
               {l.label}
-              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[var(--color-terracotta)] transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[var(--color-gold)] transition-transform duration-300 group-hover:scale-x-100" />
             </a>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href={site.mapsHref}
+            href={site.social.instagram}
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-[var(--color-ink)]/20 px-4 py-2 text-sm text-[var(--color-ink)] transition-colors hover:border-[var(--color-ink)]/60"
           >
-            Cómo llegar
+            Instagram
           </a>
           <a
-            href="#menu"
-            className="rounded-full bg-[var(--color-terracotta)] px-4 py-2 text-sm font-medium text-[var(--color-cream)] transition-colors hover:bg-[var(--color-terracotta-dark)]"
+            href={site.whatsapp.href}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-[var(--color-gold)] px-4 py-2 text-sm font-medium text-[var(--color-ink)] transition-colors hover:bg-[var(--color-gold-dark)]"
           >
-            Ver menú
+            WhatsApp
           </a>
         </div>
 
@@ -97,12 +98,12 @@ export function Header() {
               </a>
             ))}
             <a
-              href={site.mapsHref}
+              href={site.whatsapp.href}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 rounded-full border border-[var(--color-ink)]/20 px-4 py-3 text-center text-sm"
+              className="mt-2 rounded-full bg-[var(--color-gold)] px-4 py-3 text-center text-sm font-medium text-[var(--color-ink)]"
             >
-              Cómo llegar
+              WhatsApp
             </a>
           </div>
         </nav>

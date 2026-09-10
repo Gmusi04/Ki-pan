@@ -1,9 +1,19 @@
 import { site } from "@/data/site";
 
 const items = [
-  { href: "#menu", label: "Menú", icon: "M4 6h16M4 12h16M4 18h16" },
-  { href: site.mapsHref, label: "Llegar", icon: "M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z", external: true },
-  { href: site.phoneHref, label: "Llamar", icon: "M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5v3a2 2 0 0 1-2 2C10.5 21 3 13.5 3 5a2 2 0 0 1 2-2Z" },
+  { href: "#coleccion", label: "Colección", icon: "M4 6h16M4 12h16M4 18h16" },
+  {
+    href: site.social.instagram,
+    label: "Instagram",
+    icon: "M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm4.6-1.2h.01",
+    external: true,
+  },
+  {
+    href: site.whatsapp.href,
+    label: "WhatsApp",
+    icon: "M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5v3a2 2 0 0 1-2 2C10.5 21 3 13.5 3 5a2 2 0 0 1 2-2Z",
+    external: true,
+  },
 ];
 
 export function MobileTabBar() {

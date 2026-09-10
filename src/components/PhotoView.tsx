@@ -32,21 +32,29 @@ const labels: Record<PhotoKind, string> = {
   spray: "Aplicación",
 };
 
+const DEFAULT_TINT: [string, string, string] = ["#0d211a", "#173328", "#24493a"];
+
 function Placeholder({
   label,
   kind,
   className,
+  tint,
+  quiet,
 }: {
   label: string;
   kind: PhotoKind;
   className?: string;
+  tint?: [string, string, string];
+  quiet?: boolean;
 }) {
+  const [from, via, to] = tint ?? DEFAULT_TINT;
   return (
     <div
-      className={`absolute inset-0 flex flex-col justify-end overflow-hidden bg-gradient-to-br from-[#141210] via-[#1e1a15] to-[#2d2519] ${className ?? ""}`}
+      className={`absolute inset-0 flex flex-col justify-end overflow-hidden ${className ?? ""}`}
+      style={{ background: `linear-gradient(135deg, ${from}, ${via}, ${to})` }}
     >
       <div className="grain-overlay" />
-      <div className="absolute inset-0 flex items-center justify-center opacity-30">
+      <div className="absolute inset-0 flex items-center justify-center opacity-40">
         <svg
           viewBox="0 0 24 24"
           className="h-14 w-14 md:h-20 md:w-20"
@@ -59,15 +67,17 @@ function Placeholder({
           <path d={icons[kind]} />
         </svg>
       </div>
-      <div className="relative z-10 flex flex-col gap-0.5 bg-[var(--color-ink)]/90 px-3 py-2 text-[var(--color-cream)]">
-        <div className="flex items-center justify-between gap-2 text-[10px] uppercase tracking-[0.14em] md:text-xs">
-          <span>Foto pendiente</span>
-          <span className="opacity-70">{labels[kind]}</span>
+      {!quiet && (
+        <div className="relative z-10 flex flex-col gap-0.5 bg-[var(--color-ink)]/90 px-3 py-2 text-[var(--color-cream)]">
+          <div className="flex items-center justify-between gap-2 text-[10px] uppercase tracking-[0.14em] md:text-xs">
+            <span>Foto pendiente</span>
+            <span className="opacity-70">{labels[kind]}</span>
+          </div>
+          <p className="truncate text-[10px] normal-case tracking-normal text-[var(--color-cream)]/70">
+            {label}
+          </p>
         </div>
-        <p className="truncate text-[10px] normal-case tracking-normal text-[var(--color-cream)]/70">
-          {label}
-        </p>
-      </div>
+      )}
     </div>
   );
 }
@@ -81,6 +91,8 @@ export function PhotoView({
   className,
   priority,
   sizes,
+  tint,
+  quiet,
 }: {
   exists: boolean;
   src: string;
@@ -90,6 +102,8 @@ export function PhotoView({
   className?: string;
   priority?: boolean;
   sizes?: string;
+  tint?: [string, string, string];
+  quiet?: boolean;
 }) {
   if (exists) {
     return (
@@ -103,5 +117,5 @@ export function PhotoView({
       />
     );
   }
-  return <Placeholder label={label ?? alt} kind={kind} className={className} />;
+  return <Placeholder label={label ?? alt} kind={kind} className={className} tint={tint} quiet={quiet} />;
 }

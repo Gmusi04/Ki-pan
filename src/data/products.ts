@@ -46,6 +46,21 @@ export type Product = {
   featured?: boolean;
 };
 
+// Colores por familia olfativa — se usan para dar variedad visual a cada
+// tarjeta del catálogo mientras no exista foto real del producto (evita que
+// las 144 fragancias se vean idénticas con un solo color plano).
+export const familyTint: Record<Family, [string, string, string]> = {
+  Amaderado: ["#1b2e22", "#2f4a34", "#4a6b45"],
+  Floral: ["#3a1f2e", "#55293f", "#7a3b57"],
+  Cítrico: ["#1f3320", "#2e4d24", "#4d6b1f"],
+  Oriental: ["#2e1c0d", "#4a2c12", "#6b3f15"],
+  Dulce: ["#3a2318", "#55331f", "#7a4a26"],
+  Acuático: ["#0d2630", "#16404f", "#1f5a6e"],
+  Especiado: ["#301513", "#4a201c", "#6b2e26"],
+  Aromático: ["#22282a", "#37413f", "#4f5c58"],
+  Afrutado: ["#3a2412", "#55351a", "#7a4d22"],
+};
+
 export const brands: Brand[] = [
   "Afnan",
   "Al Haramain",

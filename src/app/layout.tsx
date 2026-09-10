@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Providers } from "@/components/Providers";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -74,7 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -23,9 +23,27 @@ export const site = {
     "Envíos a todo México y entrega o recolección coordinada por WhatsApp.",
 } as const;
 
-export function whatsappOrderHref(productName?: string) {
-  const text = productName
-    ? `Hola, me interesa ${productName}. ¿Me das más información?`
-    : "Hola, quiero más información sobre sus fragancias.";
+export function whatsappCartHref(
+  items: { name: string; brand: string; qty: number; price: number }[],
+  total: number,
+) {
+  const lines = items.map(
+    (i) => `- ${i.qty}x ${i.name} (${i.brand}) — ${formatMXN(i.price)} c/u`,
+  );
+  const text = [
+    "Hola, quiero hacer este pedido:",
+    "",
+    ...lines,
+    "",
+    `Total: ${formatMXN(total)}`,
+  ].join("\n");
   return `https://wa.me/529997664077?text=${encodeURIComponent(text)}`;
+}
+
+function formatMXN(n: number) {
+  return new Intl.NumberFormat("es-MX", {
+    style: "currency",
+    currency: "MXN",
+    maximumFractionDigits: 0,
+  }).format(n);
 }

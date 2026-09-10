@@ -1,9 +1,15 @@
 # Fotografía pendiente
 
-No se generó ninguna foto con IA ni de stock: para una marca real, una foto
-falsa "de tus perfumes" es peor que un placeholder honesto. Por eso cada foto
-del sitio es, por ahora, un **placeholder identificado** (fondo oscuro +
-icono + etiqueta "Foto pendiente") en vez de una imagen genérica.
+No descargué fotos de Google ni de ningún banco de imágenes: la enorme
+mayoría de esas fotos tienen dueño (la marca, una tienda, un fotógrafo) y
+usarlas en un sitio que vende algo es una infracción de derechos de autor
+real, no solo un tecnicismo — puede terminar en un reclamo de Instagram/Meta
+o de la marca. Tampoco se generó ninguna foto con IA como reemplazo.
+
+En su lugar, cada perfume del catálogo tiene un color distinto según su
+familia olfativa (amaderado, floral, cítrico, oriental, dulce, acuático,
+especiado...) en vez de un solo placeholder gris repetido 144 veces — se ve
+intencional y ordenado mientras subes las fotos reales.
 
 ## Cómo activar una foto real
 

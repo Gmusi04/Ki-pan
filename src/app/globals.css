@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta minimalista de Iconic Scents: negro, marfil y dorado. */
-  --color-cream: #f8f6f2;
-  --color-parchment: #efeae2;
-  --color-crust: #e4ddd0;
-  --color-ink: #0f0e0d;
-  --color-ink-soft: #5c5650;
-  --color-gold: #b08d57;
-  --color-gold-dark: #8f6f3f;
-  --color-line: rgba(15, 14, 13, 0.12);
+  /* Paleta de Iconic Scents: esmeralda profundo, marfil y dorado —
+     un look de perfumería árabe de lujo, más cálido que el negro plano. */
+  --color-cream: #f7f4ec;
+  --color-parchment: #ece4d2;
+  --color-crust: #ddd0ab;
+  --color-ink: #0e2019;
+  --color-ink-soft: #526056;
+  --color-gold: #c9a24b;
+  --color-gold-dark: #a3801f;
+  --color-line: rgba(14, 32, 25, 0.14);
 
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);

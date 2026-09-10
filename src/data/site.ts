@@ -10,8 +10,6 @@ export const site = {
   location: "Mérida, Yucatán",
   trustBadge: "100% original",
   social: {
-    // TODO: en tu tarjeta aparece "Iconic_Scents" — confírmanos cuál es el
-    // usuario correcto si es distinto a este.
     instagramHandle: "@iconic._scents",
     instagram: "https://www.instagram.com/iconic._scents/",
   },

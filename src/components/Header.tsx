@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
-import { IconicMark } from "./IconicMark";
 
 const links = [
   { href: "#coleccion", label: "Colección" },
@@ -34,11 +33,9 @@ export function Header({ logoSrc }: { logoSrc: string | null }) {
     >
       <div className={`container-editorial flex h-16 items-center justify-between md:h-20 ${fg}`}>
         <a href="#top" className="flex items-center gap-2">
-          {logoSrc ? (
+          {logoSrc && (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={logoSrc} alt="Iconic Scents" className="h-8 w-auto rounded-md bg-[var(--color-cream)] p-1 md:h-9" />
-          ) : (
-            <IconicMark className="h-6 w-auto md:h-7" />
           )}
           <span className="font-serif-display text-lg uppercase tracking-[0.2em] md:text-xl">
             Iconic Scents

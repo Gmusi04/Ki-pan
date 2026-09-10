@@ -1,5 +1,4 @@
 import { site } from "@/data/site";
-import { IconicMark } from "./IconicMark";
 
 export function Footer({ logoSrc }: { logoSrc: string | null }) {
   return (
@@ -7,11 +6,9 @@ export function Footer({ logoSrc }: { logoSrc: string | null }) {
       <div className="container-editorial grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            {logoSrc ? (
+            {logoSrc && (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={logoSrc} alt="Iconic Scents" className="h-8 w-auto rounded-md bg-[var(--color-cream)] p-1" />
-            ) : (
-              <IconicMark className="h-6 w-auto text-[var(--color-gold)]" />
             )}
             <p className="font-serif-display text-2xl uppercase tracking-[0.2em] text-[var(--color-cream)]">
               Iconic Scents

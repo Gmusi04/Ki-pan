@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { PhotoView, type PhotoKind } from "@/components/PhotoView";
 import { ProductModal } from "@/components/ProductModal";
-import { brands, familyTint, type Product } from "@/data/products";
+import { brands, familyTint, tiers, type Product, type Tier } from "@/data/products";
 import { useCart } from "@/lib/cart";
 import { Reveal } from "./Reveal";
 
 const PAGE_SIZE = 12;
+const ALL_BRANDS = "Todas las marcas";
 
 type Photo = { src: string; kind: PhotoKind; exists: boolean };
 type CatalogProduct = Product & { exists: boolean; photos: Photo[] };
@@ -103,15 +104,26 @@ function ProductCard({
 }
 
 export function Catalog({ products }: { products: CatalogProduct[] }) {
-  const filters = ["Todos", "Destacados", ...brands];
-  const [active, setActive] = useState("Todos");
+  const [activeTier, setActiveTier] = useState<"Todos" | "Destacados" | Tier>("Todos");
+  const [activeBrand, setActiveBrand] = useState(ALL_BRANDS);
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [selected, setSelected] = useState<CatalogProduct | null>(null);
 
+  const tierFilters: ("Todos" | "Destacados" | Tier)[] = ["Todos", "Destacados", ...tiers];
+
+  const brandOptions = useMemo(() => {
+    const pool =
+      activeTier === "Todos" || activeTier === "Destacados"
+        ? products
+        : products.filter((p) => p.tier === activeTier);
+    return [ALL_BRANDS, ...brands.filter((b) => pool.some((p) => p.brand === b))];
+  }, [activeTier, products]);
+
   const filtered = products.filter((p) => {
-    if (active === "Todos") return true;
-    if (active === "Destacados") return p.featured;
-    return p.brand === active;
+    if (activeTier === "Destacados" && !p.featured) return false;
+    if (activeTier !== "Todos" && activeTier !== "Destacados" && p.tier !== activeTier) return false;
+    if (activeBrand !== ALL_BRANDS && p.brand !== activeBrand) return false;
+    return true;
   });
 
   const shown = filtered.slice(0, visible);
@@ -128,23 +140,41 @@ export function Catalog({ products }: { products: CatalogProduct[] }) {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.05} className="mb-8 flex flex-wrap gap-2 md:mb-10 md:gap-3">
-          {filters.map((f) => (
+        <Reveal delay={0.05} className="mb-6 flex flex-wrap gap-2 md:gap-3">
+          {tierFilters.map((t) => (
             <button
-              key={f}
+              key={t}
               onClick={() => {
-                setActive(f);
+                setActiveTier(t);
+                setActiveBrand(ALL_BRANDS);
                 setVisible(PAGE_SIZE);
               }}
               className={`rounded-full border px-3.5 py-2 text-sm transition-colors md:px-5 ${
-                active === f
+                activeTier === t
                   ? "border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-ink)]"
                   : "border-[var(--color-ink)]/15 text-[var(--color-ink)]/70 hover:border-[var(--color-ink)]/40"
               }`}
             >
-              {f}
+              {t}
             </button>
           ))}
+        </Reveal>
+
+        <Reveal delay={0.08} className="mb-8 md:mb-10">
+          <select
+            value={activeBrand}
+            onChange={(e) => {
+              setActiveBrand(e.target.value);
+              setVisible(PAGE_SIZE);
+            }}
+            className="w-full max-w-xs rounded-full border border-[var(--color-ink)]/15 bg-[var(--color-cream)] px-4 py-2.5 text-sm text-[var(--color-ink)]"
+          >
+            {brandOptions.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+          </select>
         </Reveal>
 
         {shown.length === 0 ? (

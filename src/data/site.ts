@@ -3,11 +3,15 @@
 
 export const site = {
   name: "Iconic Scents",
-  tagline: "Fragancias con carácter",
-  category: "Perfumería · Fragancias para él, ella y unisex",
+  tagline: "Perfumería árabe y de diseñador",
+  category: "Perfumería · Fragancias árabes y de diseñador, 100% originales",
   description:
-    "Iconic Scents es una firma de fragancias que selecciona y comparte perfumes con personalidad: aromas amaderados, florales, cítricos y orientales para quienes quieren dejar huella. Catálogo, pedidos y envíos por Instagram y WhatsApp.",
+    "Iconic Scents es una perfumería con fragancias árabes y de diseñador 100% originales. Catálogo, pedidos y envíos por Instagram y WhatsApp.",
+  location: "Mérida, Yucatán",
+  trustBadge: "100% original",
   social: {
+    // TODO: en tu tarjeta aparece "Iconic_Scents" — confírmanos cuál es el
+    // usuario correcto si es distinto a este.
     instagramHandle: "@iconic._scents",
     instagram: "https://www.instagram.com/iconic._scents/",
   },

@@ -15,6 +15,9 @@ export function Contact() {
           <p className="mt-6 text-base leading-relaxed text-[var(--color-ink-soft)] md:text-lg">
             {site.delivery}
           </p>
+          <p className="mt-2 text-sm text-[var(--color-gold-dark)]">
+            {site.trustBadge} · {site.location}
+          </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a

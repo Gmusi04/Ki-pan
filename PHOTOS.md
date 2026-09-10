@@ -8,7 +8,7 @@ o de la marca. Tampoco se generó ninguna foto con IA como reemplazo.
 
 En su lugar, cada perfume del catálogo tiene un color distinto según su
 familia olfativa (amaderado, floral, cítrico, oriental, dulce, acuático,
-especiado...) en vez de un solo placeholder gris repetido 144 veces — se ve
+especiado...) en vez de un solo placeholder gris repetido 336 veces — se ve
 intencional y ordenado mientras subes las fotos reales.
 
 ## Cómo activar una foto real
@@ -53,24 +53,41 @@ perfume está en `src/data/products.ts`).
 Así puedes ir agregando fotos producto por producto sin tocar código — el
 catálogo entero funciona con placeholders hasta que subas cada imagen.
 
-## Por qué no usé las fotos del catálogo de tu proveedor
+## Por qué no puse las fotos de los catálogos de Canva
 
-El catálogo de Canva que compartiste trae fotos de producto de cada frasco,
-pero están marcadas con el nombre y logo de **framora.com.mx** (tu
-proveedor/mayorista). No las usé en el sitio por dos razones:
+Ya con el permiso de Framora esto ya no es tema de derechos — el problema es
+técnico: el entorno donde trabajo no puede descargar archivos directamente
+desde canva.com (ni de la mayoría de sitios externos; está bloqueado por
+seguridad). Puedo **ver** las imágenes de tus catálogos cuando las abro, pero
+no puedo guardarlas como archivo para subirlas al sitio. Probé varias rutas
+(exportar la página, descargar la miniatura) y todas quedan bloqueadas por
+igual.
 
-1. Son material de marketing de Framora, no tuyo — no es tu marca la que
-   debería aparecer en tu propio sitio.
-2. Legalmente son más seguras las fotos oficiales de cada marca (Rasasi,
-   Armaf, Lattafa, etc.) o fotos propias, que una captura de catálogo ajeno.
+### La solución (2 minutos por foto, sin que yo tenga que tocar código)
 
-## Dónde conseguir fotos limpias
+1. En Canva, exporta/descarga cada foto de producto (o la página completa)
+   como JPG o PNG.
+2. Entra a **github.com/Gmusi04/IconicScents**, abre la carpeta
+   `public/images/products/`, y usa **Add file → Upload files** para subir
+   la foto con el nombre exacto del `slug` del producto (están todos en
+   `src/data/products.ts`, o pídemelo y te paso la lista completa).
+3. En cuanto subas el archivo con el nombre correcto, aparece solo en el
+   sitio — no hace falta que me avises ni que yo haga nada más.
 
-- El sitio oficial de cada marca (Rasasi, Armaf, Lattafa, Afnan, Bharara,
-  Orientica, etc.) suele tener fotos de producto en alta resolución de uso
-  libre para reventa.
-- Pídele a tu proveedor fotos "limpias" (sin su logo) para reventa — es una
-  petición común y casi siempre la tienen.
+Lo mismo aplica para las fotos de portada/galería de la tabla de arriba.
+
+## Sobre el logo
+
+Tu logo (el monograma "IS") ya está integrado en el encabezado, el pie de
+página y el ícono de la pestaña del navegador — lo recreé como un ícono
+vectorial a partir de la imagen que enviaste, así que se ve nítido a
+cualquier tamaño. Si tienes el archivo original (SVG, PNG o AI) y quieres una
+reproducción exacta en vez de mi versión, puedes subirlo a
+`public/logo.svg` (o `.png`) por el mismo método de arriba y lo conecto.
+
+## Dónde conseguir fotos limpias (si no usas las de Canva)
+
+- El sitio oficial de cada marca (Dior, YSL, Rasasi, Armaf, Lattafa, etc.)
+  suele tener fotos de producto en alta resolución para reventa.
 - Tus propias fotos: fondo neutro, luz natural, celular con buena cámara.
-- Exporta directo desde tu Instagram (**@iconic._scents**) si ya publicaste
-  ahí tus propias fotos de producto.
+- Exporta directo desde tu Instagram si ya publicaste ahí tus propias fotos.

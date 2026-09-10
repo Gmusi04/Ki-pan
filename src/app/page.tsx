@@ -20,7 +20,14 @@ const socialFeed: { src: string; alt: string; kind: PhotoKind }[] = [
   { src: "/images/ig-4.jpg", alt: "Publicación de Instagram de Iconic Scents", kind: "detail" },
 ];
 
+function findLogoSrc(): string | null {
+  if (photoExists("/logo.svg")) return "/logo.svg";
+  if (photoExists("/logo.png")) return "/logo.png";
+  return null;
+}
+
 export default function Home() {
+  const logoSrc = findLogoSrc();
   const productsWithExists = products.map((p) => ({
     ...p,
     exists: photoExists(`/images/products/${p.slug}.jpg`),
@@ -41,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header logoSrc={logoSrc} />
       <main className="pb-16 md:pb-0">
         <Hero />
         <Intro />
@@ -51,7 +58,7 @@ export default function Home() {
         <Social feed={socialWithExists} />
         <Contact />
       </main>
-      <Footer />
+      <Footer logoSrc={logoSrc} />
       <MobileTabBar />
     </>
   );

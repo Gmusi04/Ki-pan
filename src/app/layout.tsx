@@ -24,24 +24,25 @@ const siteUrl = "https://iconicscents.example.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Iconic Scents | Fragancias con carácter",
+    default: "Iconic Scents | Perfumería árabe y de diseñador",
     template: "%s | Iconic Scents",
   },
   description:
-    "Iconic Scents: fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo, pedidos y envíos por Instagram y WhatsApp.",
+    "Iconic Scents: perfumes árabes y de diseñador 100% originales (Dior, YSL, Armani, Lattafa, Rasasi y más). Catálogo, pedidos y envíos por Instagram y WhatsApp.",
   keywords: [
     "perfumes",
     "fragancias",
-    "perfumería",
-    "perfumes de nicho",
+    "perfumería árabe",
+    "perfumes de diseñador",
     "Iconic Scents",
-    "perfumes México",
+    "perfumes originales México",
     "comprar perfume por WhatsApp",
+    "perfumes Mérida",
   ],
   openGraph: {
-    title: "Iconic Scents | Fragancias con carácter",
+    title: "Iconic Scents | Perfumería árabe y de diseñador",
     description:
-      "Fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo y pedidos por Instagram y WhatsApp.",
+      "Perfumes árabes y de diseñador 100% originales. Catálogo y pedidos por Instagram y WhatsApp.",
     url: siteUrl,
     siteName: "Iconic Scents",
     locale: "es_MX",
@@ -50,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iconic Scents | Fragancias con carácter",
+    title: "Iconic Scents | Perfumería árabe y de diseñador",
     description:
-      "Fragancias amaderadas, florales, cítricas y orientales para él, ella y unisex. Catálogo y pedidos por Instagram y WhatsApp.",
+      "Perfumes árabes y de diseñador 100% originales. Catálogo y pedidos por Instagram y WhatsApp.",
     images: ["/images/hero-perfume.jpg"],
   },
   alternates: { canonical: siteUrl },

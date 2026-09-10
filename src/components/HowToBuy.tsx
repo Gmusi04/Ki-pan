@@ -2,21 +2,9 @@ import { site } from "@/data/site";
 import { Reveal } from "./Reveal";
 
 const steps = [
-  {
-    n: "01",
-    title: "Explora el catálogo",
-    body: "Mira las fragancias disponibles aquí o en nuestro Instagram para conocer notas y precios.",
-  },
-  {
-    n: "02",
-    title: "Escríbenos",
-    body: "Cuéntanos qué fragancia te interesa por WhatsApp o por DM en Instagram.",
-  },
-  {
-    n: "03",
-    title: "Recíbelo",
-    body: "Coordinamos envío o entrega, y confirmamos junto contigo antes de despachar tu pedido.",
-  },
+  { n: "01", title: "Explora el catálogo", body: "Elige tu fragancia aquí o en Instagram." },
+  { n: "02", title: "Escríbenos", body: "Por WhatsApp o DM en Instagram." },
+  { n: "03", title: "Recíbelo", body: "Coordinamos envío o entrega." },
 ];
 
 export function HowToBuy() {

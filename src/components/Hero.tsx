@@ -27,8 +27,7 @@ export function Hero() {
             Iconic Scents
           </h1>
           <p className="mt-5 max-w-md text-lg text-[var(--color-cream)]/90 md:text-xl">
-            {site.tagline}. Fragancias amaderadas, florales, cítricas y
-            orientales para quienes quieren dejar huella.
+            {site.tagline}.
           </p>
         </div>
 

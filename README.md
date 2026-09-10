@@ -23,10 +23,12 @@ npm run lint    # eslint
 
 - **Marca y contacto**: `src/data/site.ts` — nombre, tagline, Instagram,
   WhatsApp, correo (opcional) y nota de envíos.
-- **Catálogo**: `src/data/products.ts` — agrega tantas fragancias como
-  quieras; cada una tiene nombre, familia olfativa, género, tamaño, precio
-  (o `null` para "Precio por WhatsApp") y descripción. El grid, los filtros
-  y el botón de pedido por WhatsApp funcionan solos, sin límite de productos.
+- **Catálogo**: `src/data/products.ts` — 144 fragancias precargadas
+  (Rasasi, Armaf, Lattafa, Afnan, Al Haramain, Bharara, Orientica, Maison,
+  French Avenue, Dumont, Jo Milano y MP), con marca, nombre, familia
+  olfativa, género, tamaño, precio y descripción. Los filtros son por marca
+  ("Todos", "Destacados" y cada marca). Agrega o quita fragancias con esta
+  misma forma — no hay límite de productos.
 - **Fotografía**: ver **[PHOTOS.md](./PHOTOS.md)**. Mientras no exista un
   archivo en la ruta esperada dentro de `public/images/`, cada sección
   muestra un placeholder identificado con la etiqueta "Foto pendiente"; al

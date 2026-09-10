@@ -41,12 +41,30 @@ Cada perfume en `src/data/products.ts` tiene un campo `slug` (por ejemplo
 public/images/products/<slug>.jpg
 ```
 
-Ejemplo: la foto de "Noir Absolu" va en `public/images/products/noir-absolu.jpg`.
+Ejemplo: la foto de "Hawas For Him" va en
+`public/images/products/rasasi-hawas-for-him.jpg` (el slug exacto de cada
+perfume está en `src/data/products.ts`).
 Así puedes ir agregando fotos producto por producto sin tocar código — el
 catálogo entero funciona con placeholders hasta que subas cada imagen.
 
-## Dónde conseguirlas
+## Por qué no usé las fotos del catálogo de tu proveedor
 
-- Exporta directo desde tu Instagram (**@iconic._scents**) — son tus fotos.
-- O una sesión rápida de producto: fondo neutro, luz natural o una softbox,
-  celular con buena cámara ya es suficiente para arrancar.
+El catálogo de Canva que compartiste trae fotos de producto de cada frasco,
+pero están marcadas con el nombre y logo de **framora.com.mx** (tu
+proveedor/mayorista). No las usé en el sitio por dos razones:
+
+1. Son material de marketing de Framora, no tuyo — no es tu marca la que
+   debería aparecer en tu propio sitio.
+2. Legalmente son más seguras las fotos oficiales de cada marca (Rasasi,
+   Armaf, Lattafa, etc.) o fotos propias, que una captura de catálogo ajeno.
+
+## Dónde conseguir fotos limpias
+
+- El sitio oficial de cada marca (Rasasi, Armaf, Lattafa, Afnan, Bharara,
+  Orientica, etc.) suele tener fotos de producto en alta resolución de uso
+  libre para reventa.
+- Pídele a tu proveedor fotos "limpias" (sin su logo) para reventa — es una
+  petición común y casi siempre la tienen.
+- Tus propias fotos: fondo neutro, luz natural, celular con buena cámara.
+- Exporta directo desde tu Instagram (**@iconic._scents**) si ya publicaste
+  ahí tus propias fotos de producto.

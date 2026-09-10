@@ -14,18 +14,10 @@ export function Intro() {
           <h2 className="font-serif-display text-3xl leading-tight text-[var(--color-ink)] sm:text-4xl md:text-5xl">
             Cada fragancia cuenta una historia.
           </h2>
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-[var(--color-ink-soft)] md:text-lg">
-            <p>
-              Seleccionamos fragancias con carácter propio: amaderadas,
-              florales, cítricas y orientales, pensadas para quienes buscan
-              algo más que un perfume — una firma que los identifique.
-            </p>
-            <p>
-              El catálogo completo, novedades y disponibilidad se mueven
-              primero en Instagram. Escríbenos por ahí o por WhatsApp y te
-              ayudamos a encontrar tu fragancia.
-            </p>
-          </div>
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-[var(--color-ink-soft)] md:text-lg">
+            Seleccionamos fragancias de las mejores casas árabes, con
+            carácter propio. Escríbenos y te ayudamos a encontrar la tuya.
+          </p>
         </Reveal>
       </div>
     </section>

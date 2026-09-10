@@ -23,6 +23,13 @@ export const site = {
     "Envíos a todo México y entrega o recolección coordinada por WhatsApp.",
 } as const;
 
+export function whatsappOrderHref(productName?: string) {
+  const text = productName
+    ? `Hola, me interesa ${productName}. ¿Me das más información?`
+    : "Hola, quiero más información sobre sus fragancias.";
+  return `https://wa.me/529997664077?text=${encodeURIComponent(text)}`;
+}
+
 export function whatsappCartHref(
   items: { name: string; brand: string; qty: number; price: number }[],
   total: number,

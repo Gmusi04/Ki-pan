@@ -24,6 +24,11 @@ export default function Home() {
   const productsWithExists = products.map((p) => ({
     ...p,
     exists: photoExists(`/images/products/${p.slug}.jpg`),
+    photos: [
+      { src: `/images/products/${p.slug}.jpg`, kind: "bottle" as PhotoKind },
+      { src: `/images/products/${p.slug}-detail.jpg`, kind: "detail" as PhotoKind },
+      { src: `/images/products/${p.slug}-spray.jpg`, kind: "spray" as PhotoKind },
+    ].map((photo) => ({ ...photo, exists: photoExists(photo.src) })),
   }));
   const galleryWithExists = gallery.map((img) => ({
     ...img,

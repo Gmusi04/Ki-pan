@@ -61,6 +61,29 @@ export const familyTint: Record<Family, [string, string, string]> = {
   Afrutado: ["#3a2412", "#55351a", "#7a4d22"],
 };
 
+// Descripción general de cada familia olfativa, para el panel de detalle de
+// cada perfume (además de la descripción corta propia de cada producto).
+export const familyProfile: Record<Family, string> = {
+  Amaderado:
+    "Los amaderados combinan cedro, vetiver o sándalo con un fondo cálido y seco. Duran mucho en la piel y funcionan bien todo el año, sobre todo por la tarde-noche.",
+  Floral:
+    "Los florales giran alrededor de una o varias flores (rosa, jazmín, azahar) sobre un fondo suave. Son versátiles para el día y transmiten cercanía y elegancia.",
+  Cítrico:
+    "Los cítricos abren con bergamota, limón o mandarina: frescos, ligeros y energizantes. Ideales para el día y el clima cálido, aunque su duración suele ser más corta.",
+  Oriental:
+    "Los orientales se apoyan en ámbar, especias y resinas cálidas. Son intensos, envolventes y de gran proyección — perfecciones para la noche o el clima frío.",
+  Dulce:
+    "Los dulces (gourmand) recuerdan a vainilla, caramelo o postres, con un fondo cálido y goloso. Llaman la atención y suelen tener muy buena duración.",
+  Acuático:
+    "Los acuáticos evocan el mar y la brisa: frescos, limpios y ligeros. Son una opción segura para el día a día y climas cálidos.",
+  Especiado:
+    "Los especiados usan canela, pimienta o cardamomo sobre un fondo cálido. Tienen carácter y buena proyección, ideales para quien busca algo distintivo.",
+  Aromático:
+    "Los aromáticos combinan hierbas frescas (lavanda, romero) con un fondo limpio. Son versátiles, discretos y funcionan para cualquier ocasión.",
+  Afrutado:
+    "Los afrutados destacan notas de fruta (durazno, mango, bayas) sobre un fondo suave. Son alegres y fáciles de llevar, muy usados de día.",
+};
+
 export const brands: Brand[] = [
   "Afnan",
   "Al Haramain",

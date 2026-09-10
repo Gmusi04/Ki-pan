@@ -2,6 +2,7 @@
 
 import { whatsappCartHref } from "@/data/site";
 import { useCart } from "@/lib/cart";
+import { useLockBodyScroll } from "@/lib/useLockBodyScroll";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("es-MX", {
@@ -13,6 +14,7 @@ function formatPrice(price: number) {
 
 export function CartDrawer() {
   const { items, totalPrice, isOpen, closeCart, setQty, remove, clear } = useCart();
+  useLockBodyScroll(isOpen);
 
   if (!isOpen) return null;
 
@@ -81,7 +83,10 @@ export function CartDrawer() {
         </div>
 
         {items.length > 0 && (
-          <div className="border-t border-[var(--color-line)] px-5 py-4">
+          <div
+            className="border-t border-[var(--color-line)] px-5 pt-4"
+            style={{ paddingBottom: "calc(1rem + env(safe-area-inset-bottom))" }}
+          >
             <div className="mb-4 flex items-center justify-between">
               <span className="text-sm text-[var(--color-ink-soft)]">Total</span>
               <span className="font-serif-display text-2xl text-[var(--color-ink)]">

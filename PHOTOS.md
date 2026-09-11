@@ -13,17 +13,21 @@ No pude bajar fotos directo desde los links de Canva (ese dominio está
 bloqueado en mi entorno por seguridad, sin relación con permisos), pero el
 PDF exportado sí funcionó — de ahí saqué cada imagen automáticamente.
 
-## Catálogo de diseñador — pendiente ⚠️
+## Catálogo de diseñador — listo ✅
 
-Las 192 fragancias de diseñador (Dior, YSL, Armani, Valentino, Versace,
-Carolina Herrera, etc.) siguen con el placeholder de color por familia.
+Las 192 fragancias de diseñador (Jean Paul Gaultier, Giorgio Armani,
+Valentino, Yves Saint Laurent, Ariana Grande, Moschino, Dolce & Gabbana,
+Calvin Klein, Versace, Hugo Boss, Montblanc, Carolina Herrera, Dior, Katy
+Perry, Nautica, Lancôme, Tommy Hilfiger, Azzaro, Cacharel, Halloween, Paco
+Rabanne, Ralph Lauren, Perry Ellis, Coach, Paris Hilton) ya tienen su foto
+real en `public/images/products/<slug>.jpg`, recortada del PDF
+`CATA_LOGO_DISEN_ADOR.pdf` que subiste. Igual que el árabe, cada imagen ya
+venía en fondo blanco limpio.
 
-Intentamos varias veces pero el PDF del catálogo de diseñador nunca llegó
-como archivo adjunto real a esta conversación (solo llegaron dos copias del
-catálogo árabe). Para poder procesar las fotos de diseñador de la misma
-forma, sube el PDF del catálogo de diseñador como **archivo adjunto** (el
-clip 📎 del chat), igual que hiciste con el árabe — no como imagen pegada
-ni como link de Canva, porque esos no los puedo leer.
+Nota: el catálogo de Valentino trae 10 fotos (5 líneas Uomo + 5 Donna) pero
+el sitio solo tiene 6 productos Valentino, así que se usó la foto de cada
+línea/género que corresponde a cada producto — las 4 fotos sobrantes no se
+usaron. Todo lo demás mapea 1 a 1 sin sobras ni faltantes.
 
 ## Fotos generales del sitio — pendientes
 

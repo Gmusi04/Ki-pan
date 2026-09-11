@@ -29,29 +29,28 @@ el sitio solo tiene 6 productos Valentino, así que se usó la foto de cada
 línea/género que corresponde a cada producto — las 4 fotos sobrantes no se
 usaron. Todo lo demás mapea 1 a 1 sin sobras ni faltantes.
 
-## Fotos generales del sitio — pendientes
+Las 336 fotos se recortaron de los PDFs renderizados a 600dpi (el doble de
+la resolución inicial) para que se vean nítidas incluso en pantallas
+grandes o al hacer zoom en el modal de producto.
 
-Estas todavía no existen; en cuanto subas un archivo con el nombre exacto,
-el sitio lo usa automáticamente sin tocar código (`PhotoView` +
-`photoExists`, ver `src/components/PhotoView.tsx`):
+## Logo — pendiente ⚠️
 
-| Archivo | Sección | Qué debe mostrar | Orientación |
-|---|---|---|---|
-| `public/images/hero-perfume.jpg` | Portada + Open Graph / Twitter card | Tu mejor foto de producto | Horizontal o vertical, con espacio arriba para el texto |
-| `public/images/gallery-bottle-1.jpg` | Galería | Frasco, plano completo | Vertical |
-| `public/images/gallery-flatlay.jpg` | Galería | Varios frascos en composición cenital | Horizontal ancha |
-| `public/images/gallery-detail-1.jpg` | Galería | Detalle de tapa/etiqueta | Cuadrada |
-| `public/images/gallery-packaging.jpg` | Galería | Caja o empaque | Cuadrada |
-| `public/images/gallery-lifestyle-1.jpg` | Galería | Fragancia en uso / contexto | Vertical |
-| `public/images/gallery-spray.jpg` | Galería | Aplicación (spray, gesto) | Horizontal ancha |
-| `public/images/gallery-bottle-2.jpg` | Galería | Frasco, plano cercano | Cuadrada |
-| `public/images/gallery-lifestyle-2.jpg` | Galería | Estilo de vida | Cuadrada |
-| `public/images/gallery-detail-2.jpg` | Galería | Detalle / textura | Cuadrada |
-| `public/images/ig-1.jpg` … `ig-4.jpg` | Sección Instagram | 4 publicaciones reales recientes de @iconic._scents | Cuadrada |
+Todavía no tengo tu logo real. Intentamos varias veces pero solo llegan los
+PDFs de los catálogos a esta conversación — ninguna imagen de logo llegó
+como archivo adjunto real. Sube el logo con el clip 📎 de adjuntar archivo
+(no lo pegues ni lo arrastres al cuadro de texto). En cuanto llegue como
+`public/logo.svg` o `public/logo.png`, el sitio lo muestra automáticamente
+en el header y el footer junto al nombre — sin tocar código.
 
-Súbelas por GitHub (**github.com/Gmusi04/IconicScents** → carpeta
-correspondiente → **Add file → Upload files**) con el nombre exacto, o
-mándamelas y las subo yo.
+## Portada y otras fotos del sitio
+
+La portada ahora es blanca y minimalista, sin foto de fondo (a petición
+tuya) — solo el nombre, el eslogan y los botones. La sección de Galería y
+el texto de "Nosotros" se quitaron por completo.
+
+Sigue pendiente la sección de Instagram (`public/images/ig-1.jpg` …
+`ig-4.jpg`, publicaciones reales de @iconic._scents, cuadradas). Súbelas
+por GitHub o mándamelas y las subo yo.
 
 ## Catálogo (una foto por producto)
 

@@ -5,8 +5,6 @@ import { site } from "@/data/site";
 
 const links = [
   { href: "#coleccion", label: "Colección" },
-  { href: "#galeria", label: "Galería" },
-  { href: "#nosotros", label: "Nosotros" },
   { href: "#contacto", label: "Contacto" },
 ];
 
@@ -21,17 +19,15 @@ export function Header({ logoSrc }: { logoSrc: string | null }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const fg = scrolled || open ? "text-[var(--color-ink)]" : "text-[var(--color-cream)]";
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
           ? "bg-[var(--color-cream)]/90 backdrop-blur-md shadow-[0_1px_0_var(--color-line)]"
-          : "bg-transparent"
+          : "bg-[var(--color-cream)]"
       }`}
     >
-      <div className={`container-editorial flex h-16 items-center justify-between md:h-20 ${fg}`}>
+      <div className="container-editorial flex h-16 items-center justify-between text-[var(--color-ink)] md:h-20">
         <a href="#top" className="flex items-center gap-2">
           {logoSrc && (
             // eslint-disable-next-line @next/next/no-img-element

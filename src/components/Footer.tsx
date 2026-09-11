@@ -49,9 +49,6 @@ export function Footer({ logoSrc }: { logoSrc: string | null }) {
               <a href="#coleccion" className="hover:text-[var(--color-cream)]">Colección</a>
             </li>
             <li>
-              <a href="#galeria" className="hover:text-[var(--color-cream)]">Galería</a>
-            </li>
-            <li>
               <a href="#contacto" className="hover:text-[var(--color-cream)]">Contacto</a>
             </li>
           </ul>

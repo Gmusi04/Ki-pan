@@ -1,15 +1,12 @@
 import { Catalog } from "@/components/Catalog";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Gallery } from "@/components/Gallery";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { HowToBuy } from "@/components/HowToBuy";
-import { Intro } from "@/components/Intro";
 import { MobileTabBar } from "@/components/MobileTabBar";
 import type { PhotoKind } from "@/components/PhotoView";
 import { Social } from "@/components/Social";
-import { gallery } from "@/data/gallery";
 import { products } from "@/data/products";
 import { photoExists } from "@/lib/photoExists";
 
@@ -37,10 +34,6 @@ export default function Home() {
       { src: `/images/products/${p.slug}-spray.jpg`, kind: "spray" as PhotoKind },
     ].map((photo) => ({ ...photo, exists: photoExists(photo.src) })),
   }));
-  const galleryWithExists = gallery.map((img) => ({
-    ...img,
-    exists: photoExists(img.src),
-  }));
   const socialWithExists = socialFeed.map((img) => ({
     ...img,
     exists: photoExists(img.src),
@@ -51,9 +44,7 @@ export default function Home() {
       <Header logoSrc={logoSrc} />
       <main className="pb-16 md:pb-0">
         <Hero />
-        <Intro />
         <Catalog products={productsWithExists} />
-        <Gallery images={galleryWithExists} />
         <HowToBuy />
         <Social feed={socialWithExists} />
         <Contact />

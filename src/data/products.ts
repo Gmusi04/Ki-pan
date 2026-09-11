@@ -92,15 +92,15 @@ export const familyProfile: Record<Family, string> = {
 // tarjeta del catálogo mientras no exista foto real del producto (evita que
 // cientos de fragancias se vean idénticas con un solo color plano).
 export const familyTint: Record<Family, [string, string, string]> = {
-  "Acuático": ["#0d2630", "#16404f", "#1f5a6e"],
-  "Afrutado": ["#3a2412", "#55351a", "#7a4d22"],
-  "Amaderado": ["#1b2e22", "#2f4a34", "#4a6b45"],
-  "Aromático": ["#22282a", "#37413f", "#4f5c58"],
-  "Cítrico": ["#1f3320", "#2e4d24", "#4d6b1f"],
-  "Dulce": ["#3a2318", "#55331f", "#7a4a26"],
-  "Especiado": ["#301513", "#4a201c", "#6b2e26"],
-  "Floral": ["#3a1f2e", "#55293f", "#7a3b57"],
-  "Oriental": ["#2e1c0d", "#4a2c12", "#6b3f15"],
+  "Acuático": ["#0a0a0a", "#1e1e1e", "#333333"],
+  "Afrutado": ["#0a0a0a", "#26200f", "#453a1a"],
+  "Amaderado": ["#0a0a0a", "#211d18", "#3a332a"],
+  "Aromático": ["#0a0a0a", "#1c1c1c", "#333333"],
+  "Cítrico": ["#0a0a0a", "#24200e", "#463d16"],
+  "Dulce": ["#0a0a0a", "#251c11", "#453419"],
+  "Especiado": ["#0a0a0a", "#241412", "#432420"],
+  "Floral": ["#0a0a0a", "#221420", "#3f2438"],
+  "Oriental": ["#0a0a0a", "#221d0f", "#40361a"],
 };
 
 export const tiers: Tier[] = ["Árabe", "Diseñador"];

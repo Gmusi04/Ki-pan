@@ -32,7 +32,7 @@ const labels: Record<PhotoKind, string> = {
   spray: "Aplicación",
 };
 
-const DEFAULT_TINT: [string, string, string] = ["#0d211a", "#173328", "#24493a"];
+const DEFAULT_TINT: [string, string, string] = ["#0a0a0a", "#1f1f1f", "#333333"];
 
 function Placeholder({
   label,

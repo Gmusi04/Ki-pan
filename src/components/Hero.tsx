@@ -14,6 +14,7 @@ export function Hero() {
           kind="bottle"
           priority
           sizes="100vw"
+          fit="cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/90 via-[var(--color-ink)]/30 to-[var(--color-ink)]/10" />
       </div>

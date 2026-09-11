@@ -44,6 +44,7 @@ export function Gallery({
                   alt={img.alt}
                   kind={img.kind}
                   sizes="(min-width: 768px) 25vw, 50vw"
+                  fit="cover"
                 />
               </div>
               <div className="absolute inset-0 bg-[var(--color-ink)]/0 transition-colors duration-300 group-hover:bg-[var(--color-ink)]/10" />

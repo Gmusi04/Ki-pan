@@ -93,6 +93,7 @@ export function PhotoView({
   sizes,
   tint,
   quiet,
+  fit = "contain",
 }: {
   exists: boolean;
   src: string;
@@ -104,8 +105,23 @@ export function PhotoView({
   sizes?: string;
   tint?: [string, string, string];
   quiet?: boolean;
+  fit?: "contain" | "cover";
 }) {
   if (exists) {
+    if (fit === "cover") {
+      return (
+        <div className={`absolute inset-0 ${className ?? ""}`}>
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            priority={priority}
+            sizes={sizes ?? "100vw"}
+            className="object-cover"
+          />
+        </div>
+      );
+    }
     return (
       <div className={`absolute inset-0 bg-white ${className ?? ""}`}>
         <Image
